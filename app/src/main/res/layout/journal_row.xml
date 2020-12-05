@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:background="@color/centerGColor"
+        android:elevation="10dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/journal_row_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:padding="3dp"
+            android:text="Gina"
+            android:textSize="17sp" />
+
+        <ImageButton
+            android:id="@+id/journal_row_share_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="3todo"
+            android:src="@android:drawable/ic_menu_share" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/journal_image_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/image_three" />
+
+        <TextView
+            android:id="@+id/journal_title_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/journal_thought_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="15dp"
+            android:text="Thoughts..."
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/journal_timestamp_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Date created"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--
+
+
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:gravity="end" android:alpha="0.8" android:background="@color/centerGColor" android:elevation="10dp" android:orientation="horizontal">
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:gravity="start" android:textSize="17sp" android:layout_weight="1" android:padding="3dp" android:text="Gina" android:id="@+id/journal_row_username"/>
+
+    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="@android:color/transparent" android:id="@+id/journal_row_share_button" android:src="@android:drawable/ic_menu_share"/>
+
+    </LinearLayout>
+
+
+    -<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    -->
