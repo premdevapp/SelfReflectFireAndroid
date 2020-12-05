@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myselfreflect.R;
 import com.example.myselfreflect.model.Journal;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
